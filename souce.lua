@@ -46,7 +46,7 @@ function uh:DraggingEnabled(frame, parent)
 end
 
 function uh.SetupUI(conpigs)
-	conpigs = conpigs
+	conpigs = conpigs or {}
 	conpigs.Title = conpigs.Title or "beat your meat"
 	local kys = Instance.new("ScreenGui")
 	local MainFrame = Instance.new("Frame")
