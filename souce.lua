@@ -164,7 +164,7 @@ function uh.SetupUI(conpigs)
 		TabListLayout_2.Padding = UDim.new(0, 2)
 		
 		game:GetService("RunService").RenderStepped:Connect(function()
-			Main_2.CanvasSize = UDim2.new(0,0,0,TabListLayout.AbsoluteContentSize.Y)
+			Main_2.CanvasSize = UDim2.new(0,0,0,TabListLayout_2.AbsoluteContentSize.Y)
 		end)
 		
 		local tabc = ContainerFrame
