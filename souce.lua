@@ -56,7 +56,7 @@ function uh.SetupUI(conpigs)
 	local TabListLayout = Instance.new("UIListLayout")
 	local ContainerFrame = Instance.new("Frame")
 	kys.Name = "kys"
-	kys.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	kys.Parent = game.CoreGui
 	kys.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	MainFrame.Name = "MainFrame"
@@ -344,7 +344,7 @@ function uh.SetupUI(conpigs)
 			SliderStroke.Parent = MainSlider
 			SliderStroke.Color = Color3.fromRGB(255,60,60)
 			
-			local mouse = game.Players.LocalPlayer:GetMouse()
+			local mouse = game:GetService("Players").LocalPlayer:GetMouse()
 			local uis = game:GetService("UserInputService")
 
 			local Min_Value = conpig.Minimum
