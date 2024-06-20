@@ -349,7 +349,7 @@ function uh.SetupUI(conpigs)
 
 			local Min_Value = conpig.Minimum
 			local Max_Value = conpig.Maximum
-			local Precise = true
+			local Precise = conpig.Precise
 			local Bar = SliderFill
 			local Sliderbox = SliderValueAndTrigger
 			local SizeChia = 370
