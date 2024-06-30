@@ -458,6 +458,221 @@ function uh.SetupUI(conpigs)
 			MainLabel.TextSize = 14.000
 			MainLabel.TextXAlignment = textxalignment
 		end
+		function nuhuh.CreateDropdown(conpigs)
+			conpigs = conpigs or {}
+			conpigs.Text = conpigs.Text or "nuhuh List"
+			conpigs.TableList = conpigs.TableList or {"kill yourself","eat a DICK","you are so ugly"}
+			conpigs.Callback = conpigs.Callback or function(a) print(a) end
+			local Dropdown1 = Instance.new("Frame")
+			local DropdownTitle = Instance.new("TextButton")
+			local List = Instance.new("Frame")
+			local ListCorner = Instance.new("UICorner")
+			local MainList = Instance.new("Frame")
+			local MainListCorner = Instance.new("UICorner")
+			local ScrollingList = Instance.new("ScrollingFrame")
+			--local Option = Instance.new("TextButton")
+			local ListLayout = Instance.new("UIListLayout")
+			--local Option_2 = Instance.new("TextButton")
+			--local Option_3 = Instance.new("TextButton")
+			local uhhh1 = Instance.new("Frame")
+			local uhhh2 = Instance.new("Frame")
+			local DropdownText = Instance.new("TextLabel")
+			local TriggerDRop = Instance.new("ImageButton")
+			
+			Dropdown1.Name = "Dropdown1"
+			Dropdown1.Parent = Main_2
+			Dropdown1.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+			Dropdown1.BackgroundTransparency = 1.000
+			Dropdown1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Dropdown1.BorderSizePixel = 0
+			Dropdown1.Size = UDim2.new(0, 370, 0, 20)
+
+			DropdownTitle.Name = "DropdownTitle"
+			DropdownTitle.Parent = Dropdown1
+			DropdownTitle.BackgroundColor3 = Color3.fromRGB(225, 53, 53)
+			DropdownTitle.BackgroundTransparency = 1.000
+			DropdownTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			DropdownTitle.BorderSizePixel = 0
+			DropdownTitle.Position = UDim2.new(0.00270270277, 0, 0, 0)
+			DropdownTitle.Size = UDim2.new(0, 370, 0, 20)
+			DropdownTitle.Font = Enum.Font.SourceSansSemibold
+			DropdownTitle.Text = "Select Something"
+			DropdownTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownTitle.TextSize = 14.000
+			DropdownTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+			List.Name = "List"
+			List.Parent = Dropdown1
+			List.BackgroundColor3 = Color3.fromRGB(200, 47, 47)
+			List.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			List.BorderSizePixel = 0
+			List.Position = UDim2.new(0.513513505, 0, 0, 0)
+			List.Size = UDim2.new(0, 180, 0, 20)
+
+			ListCorner.CornerRadius = UDim.new(0, 3)
+			ListCorner.Name = "ListCorner"
+			ListCorner.Parent = List
+
+			MainList.Name = "MainList"
+			MainList.Parent = List
+			MainList.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
+			MainList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			MainList.BorderSizePixel = 0
+			MainList.Position = UDim2.new(0, 0, 1, 0)
+			MainList.Size = UDim2.new(0, 180, 0, 0)
+			MainList.Visible = false
+
+			MainListCorner.CornerRadius = UDim.new(0, 3)
+			MainListCorner.Name = "MainListCorner"
+			MainListCorner.Parent = MainList
+
+			ScrollingList.Name = "ScrollingList"
+			ScrollingList.Parent = MainList
+			ScrollingList.Active = true
+			ScrollingList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ScrollingList.BackgroundTransparency = 1.000
+			ScrollingList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ScrollingList.BorderSizePixel = 0
+			ScrollingList.Size = UDim2.new(0, 180, 0, 100)
+			ScrollingList.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+			ScrollingList.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+			ScrollingList.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+			ScrollingList.ScrollBarThickness = 2
+			ScrollingList.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+			--[[
+			local Option = Instance.new("TextButton")
+			Option.Name = "Option"
+			Option.Parent = ScrollingList
+			Option.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Option.BackgroundTransparency = 1.000
+			Option.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Option.BorderSizePixel = 0
+			Option.Position = UDim2.new(0.055555556, 0, 0, 0)
+			Option.Size = UDim2.new(0, 175, 0, 20)
+			Option.Font = Enum.Font.SourceSansSemibold
+			Option.Text = "uhh"
+			Option.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Option.TextSize = 14.000
+			Option.TextWrapped = true
+			Option.TextXAlignment = Enum.TextXAlignment.Left
+			--]]
+
+			ListLayout.Name = "ListLayout"
+			ListLayout.Parent = ScrollingList
+			ListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+			ListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+			uhhh1.Name = "uhhh1"
+			uhhh1.Parent = List
+			uhhh1.BackgroundColor3 = Color3.fromRGB(255, 60, 60)
+			uhhh1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			uhhh1.BorderSizePixel = 0
+			uhhh1.Position = UDim2.new(0, 0, 1, 0)
+			uhhh1.Size = UDim2.new(0, 180, 0, 3)
+			uhhh1.Visible = false
+
+			uhhh2.Name = "uhhh2"
+			uhhh2.Parent = List
+			uhhh2.BackgroundColor3 = Color3.fromRGB(199, 47, 47)
+			uhhh2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			uhhh2.BorderSizePixel = 0
+			uhhh2.Position = UDim2.new(0, 0, 0.850000024, 0)
+			uhhh2.Size = UDim2.new(0, 180, 0, 3)
+			uhhh2.Visible = false
+
+			DropdownText.Name = "DropdownText"
+			DropdownText.Parent = List
+			DropdownText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownText.BackgroundTransparency = 1.000
+			DropdownText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			DropdownText.BorderSizePixel = 0
+			DropdownText.Position = UDim2.new(-0.000150214299, 0, 0.200000003, 0)
+			DropdownText.Size = UDim2.new(0, 160, 0, 12)
+			DropdownText.Font = Enum.Font.GothamSemibold
+			DropdownText.Text = " nil"
+			DropdownText.TextColor3 = Color3.fromRGB(255, 255, 255)
+			DropdownText.TextSize = 10.000
+			DropdownText.TextXAlignment = Enum.TextXAlignment.Left
+
+			TriggerDRop.Name = "TriggerDRop"
+			TriggerDRop.Parent = List
+			TriggerDRop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TriggerDRop.BackgroundTransparency = 1.000
+			TriggerDRop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TriggerDRop.BorderSizePixel = 0
+			TriggerDRop.Position = UDim2.new(0.883333325, 0, 0, 0)
+			TriggerDRop.Rotation = 90.000
+			TriggerDRop.Size = UDim2.new(0, 20, 0, 20)
+			TriggerDRop.Image = "rbxassetid://4641587888"
+			
+			local list = List
+			local mainlist = MainList
+			local dropped = false
+
+
+			list.TriggerDRop.MouseButton1Click:Connect(function()
+				if dropped==false then
+					dropped=true
+					mainlist.Visible = true
+					ScrollingList.Visible = true
+					game:GetService("TweenService"):Create(mainlist, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,180,0,100)}):Play()
+					game:GetService("TweenService"):Create(Dropdown1, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,370,0,120)}):Play()
+					game:GetService("TweenService"):Create(TriggerDRop, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Rotation =0}):Play()
+					--task.wait(0.3)
+					uhhh1.Visible = true
+					uhhh2.Visible = true
+				elseif dropped==true then
+					dropped=false
+					uhhh1.Visible = false
+					uhhh2.Visible = false
+					ScrollingList.Visible = false
+					game:GetService("TweenService"):Create(mainlist, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,180,0,0)}):Play()
+					game:GetService("TweenService"):Create(Dropdown1, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,370,0,20)}):Play()
+					game:GetService("TweenService"):Create(TriggerDRop, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Rotation =90}):Play()
+					task.wait(0.3)
+					mainlist.Visible = false
+				end
+			end)
+			
+			for i, v in next, conpigs.TableList do
+				local Option = Instance.new("TextButton")
+				Option.Name = "Option"
+				Option.Parent = ScrollingList
+				Option.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				Option.BackgroundTransparency = 1.000
+				Option.BorderColor3 = Color3.fromRGB(0, 0, 0)
+				Option.BorderSizePixel = 0
+				Option.Position = UDim2.new(0.055555556, 0, 0, 0)
+				Option.Size = UDim2.new(0, 175, 0, 20)
+				Option.Font = Enum.Font.SourceSansSemibold
+				Option.Text = v
+				Option.TextColor3 = Color3.fromRGB(255, 255, 255)
+				Option.TextSize = 14.000
+				Option.TextWrapped = true
+				Option.TextXAlignment = Enum.TextXAlignment.Left
+			end
+
+			for i, v in next, mainlist.ScrollingList:GetChildren() do
+				if v.Name == 'Option' then
+					v.MouseButton1Click:connect(function()
+						list.DropdownText.Text = "   "..v.Text
+						conpigs.Callback(v.Text)
+						dropped=false
+						uhhh1.Visible = false
+						uhhh2.Visible = false
+						ScrollingList.Visible = false
+						game:GetService("TweenService"):Create(mainlist, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,180,0,0)}):Play()
+						game:GetService("TweenService"):Create(Dropdown1, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Size = UDim2.new(0,370,0,20)}):Play()
+						game:GetService("TweenService"):Create(TriggerDRop, TweenInfo.new(0.3, Enum.EasingStyle.Quad), {Rotation =90}):Play()
+						task.wait(0.3)
+						mainlist.Visible = false
+					end)
+				end
+			end
+			game:GetService("RunService").RenderStepped:Connect(function()
+				ScrollingList.CanvasSize = UDim2.new(0,0,0,ListLayout.AbsoluteContentSize.Y)
+			end)
+		end
 		return nuhuh
 	end
 	return tabsthing
