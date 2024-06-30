@@ -1,7 +1,7 @@
 # Example
 ```lua
-local smoll = loadstring(game:HttpGet('https://raw.githubusercontent.com/Breadido/Smoll/main/source.lua'))()
-local idk = smolll.SetupUI({
+local smoll = loadstring(game:HttpGet('https://raw.githubusercontent.com/Breadido/Smoll/main/souce.lua'))()
+local idk = smoll.SetupUI({
 	Title = "THIS! IS! title :>"
 })
 
@@ -26,7 +26,15 @@ againidk.CreateSlider({
 		print(a)
 	end),
 })
-
+-- too lazy to implemented refresh dropdown sowwy :<<
+againidk.CreateDropdown({
+	Text = "Select Something rAndOm",
+	TableList = {"sus","hayayaya","lol","bruh","heh?","oaoaosjdhdf","kys"},
+	Callback = (function(a)
+		print(a)
+	end),
+	
+})
 againidk.CreateButtons({
 	Text = "kick your mom",
 	Callback = (function()
