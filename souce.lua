@@ -457,6 +457,14 @@ function uh.SetupUI(conpigs)
 			MainLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			MainLabel.TextSize = 14.000
 			MainLabel.TextXAlignment = textxalignment
+
+			local labelthingz = {}
+
+			function labelthingz.SetText(txt)
+			MainLabel.Text = tostring(txt)
+			end
+
+			return labelthingz
 		end
 		function nuhuh.CreateDropdown(conpigs)
 			conpigs = conpigs or {}
