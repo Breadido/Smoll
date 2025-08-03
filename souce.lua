@@ -47,7 +47,7 @@ end
 
 function uh.SetupUI(conpigs)
 	conpigs = conpigs or {}
-	conpigs.Title = conpigs.Title or "beat your meat"
+	conpigs.Title = conpigs.Title or "uh"
 	local kys = Instance.new("ScreenGui")
 	local MainFrame = Instance.new("Frame")
 	local LineBar = Instance.new("Frame")
@@ -400,7 +400,7 @@ function uh.SetupUI(conpigs)
 		function nuhuh.CreateButtons(conpig)
 			conpig = conpig or {}
 			conpig.Text = conpig.Text or "yashda"
-			conpig.Callback = conpig.Callback or function() print("haha i fucked your mom last night") end
+			conpig.Callback = conpig.Callback or function() print("hahat") end
 			
 			local Button = Instance.new("Frame")
 			local MainButton = Instance.new("TextButton")
@@ -469,7 +469,7 @@ function uh.SetupUI(conpigs)
 		function nuhuh.CreateDropdown(conpigs)
 			conpigs = conpigs or {}
 			conpigs.Text = conpigs.Text or "nuhuh List"
-			conpigs.TableList = conpigs.TableList or {"kill yourself","eat a DICK","you are so ugly"}
+			conpigs.TableList = conpigs.TableList or {"kill yourself","eat a ","you are so ugly"}
 			conpigs.Callback = conpigs.Callback or function(a) print(a) end
 			local Dropdown1 = Instance.new("Frame")
 			local DropdownTitle = Instance.new("TextButton")
